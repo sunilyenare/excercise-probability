@@ -20,4 +20,9 @@ public class StatisticProbability {
         return this.hashCode()==obj.hashCode();
 
     }
+
+    public float probabilityOfEventNotOccure() {
+        return 1-probabilityValue;
+    }
+
 }

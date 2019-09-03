@@ -22,4 +22,10 @@ public class StatisticProbabilityTest {
         probabilityOfHeadInTossingACoin=new StatisticProbability(1.0f);
         assertFalse(probabilityOfHeadInTossingACoin.equals(probabilityOfEvenNumbersComesInDice));
     }
+
+    @Test
+    void givenProbabilityOfHeadComesInCoin_whenCheckProbabilityOfNotOccurrence_thenShouldReturnPointFive() {
+        assertEquals(0.5f, probabilityOfHeadInTossingACoin.probabilityOfEventNotOccure());
+    }
+
 }
