@@ -17,4 +17,9 @@ public class StatisticProbabilityTest {
     void givenProbabilityOfHeadComesInCoinAndProbabilityOfEvenNumberComesInDice_whenCheckEquality_thenShouldReturnTrue() {
         assertTrue(probabilityOfHeadInTossingACoin.equals(probabilityOfEvenNumbersComesInDice));
     }
+    @Test
+    void givenProbabilityOfHeadComesInCoinIsOneAndProbabilityOfEvenNumberComesInDiceIsZeroPointFive_whenCheckEquality_thenShouldReturnFalse() {
+        probabilityOfHeadInTossingACoin=new StatisticProbability(1.0f);
+        assertFalse(probabilityOfHeadInTossingACoin.equals(probabilityOfEvenNumbersComesInDice));
+    }
 }
